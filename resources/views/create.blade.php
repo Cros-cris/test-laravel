@@ -1,7 +1,7 @@
 <html>
   <body>
     <h1> create een Nieuw Project</h1>
-      <form method="post" action="/">
+      <form method="post" action="/test/">
           {{ csrf_field() }}
           <div>
             <input type = "text" name = "project" placeholder="Project naam">

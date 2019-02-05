@@ -4,17 +4,19 @@
 
 <h1 class="title">Edit Project</h1>
 
-  <form>
+  <form method="post" action="/test/{{ $test->id }}">
+    {{ method_field('PATCH') }}
+    {{ csrf_field() }}
     <div class="field">
       <label class="label" for="title">Title</label>
         <div class="control">
-          <input type="text" class="input" name="title" value="{{ $test->project }}">
+          <input type="text" class="input" name="project" value="{{ $test->project }}">
         </div>
       </div>
       <div class="field">
         <label class="label" for="beschrijving"></label>
           <div class="control">
-            <textarea class="textarea">{{ $test->beschrijving }}</textarea>
+            <textarea class="textarea" name='beschrijving'>{{ $test->beschrijving }}</textarea>
           </div>
         </div>
         <div class="field">

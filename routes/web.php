@@ -20,14 +20,16 @@ Route::get('/contact', 'testcontroller@contact');
 
 Route::get('/about', 'testcontroller@about');
 
-Route::get('/create', 'testcontroller@create');
+Route::get('/test/create', 'testcontroller@create');
 
-Route::post('/', 'testcontroller@store');
+Route::post('/test', 'testcontroller@store');
 
-Route::patch('/{test}', 'testcontroller@update');
+Route::patch('/test/{test}', 'testcontroller@update');
 
-Route::delete('/{test}', 'testcontroller@destroy');
+Route::delete('/test/{test}', 'testcontroller@destroy');
 
-Route::get('/{test}/edit', 'testcontroller@edit');
+Route::get('/test/{test}/edit', 'testcontroller@edit');
 
-Route::get('/{test}', 'testcontroller@show');
+Route::get('/test/{test}', 'testcontroller@show');
+
+Route::get('/test','testcontroller@index');
