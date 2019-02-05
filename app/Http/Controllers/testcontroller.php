@@ -59,7 +59,7 @@ public function edit($id){
 
 $t = test::find($id);
 
-return view('/edit', compact('test'));
+return view('/.edit', compact('test'));
 
 }
 
