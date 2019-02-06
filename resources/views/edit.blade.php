@@ -25,5 +25,14 @@
             </div>
           </div>
       </form>
+      <div>
+        <form method="post" action='/test/{{ $test->id }}'>
+          {{ method_field('DELETE') }}
+          {{ csrf_field() }}
+          <div>
+            <button type='delete' data-id="{{ $test->id }}" class='deleteproject'>verwijderen</buttton>
+        </div>
+      </form>
+
 
 @endsection

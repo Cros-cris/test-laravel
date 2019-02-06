@@ -60,8 +60,12 @@ public function update($id){
 
       }
 
-public function destroy(){
+public function destroy($id){
 
+  test::find($id)->delete();
+
+
+      return redirect('/test/');
 
 }
 
